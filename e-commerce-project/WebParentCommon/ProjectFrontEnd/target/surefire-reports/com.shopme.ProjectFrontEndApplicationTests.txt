@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.shopme.ProjectFrontEndApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.418 s <<< FAILURE! - in com.shopme.ProjectFrontEndApplicationTests
+com.shopme.ProjectFrontEndApplicationTests  Time elapsed: 0.415 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.lang.Class.getName()" because "found" is null
+
