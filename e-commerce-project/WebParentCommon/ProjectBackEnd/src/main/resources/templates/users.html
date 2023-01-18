@@ -77,12 +77,14 @@
 		</div>
 
 		<div>
-			<table class="table table-responsive-xl">
+			<table class="table table-bordered table-striped table-hover table-responsive-xl">
 				<thead class="thead-dark">
 					<tr>
 						<th>User ID</th>
 
 						<th>Photos</th>
+
+						<th>E-Mail</th>
 
 						<th>First Name</th>
 
@@ -97,13 +99,24 @@
 				</thead>
 
 				<tbody>
-
+					<tr th:each="user : ${listUsers}">
+						<td>[[${user.id}]]</td>
+						<td></td>
+						<td>[[${user.email}]]</td>
+						<td>[[${user.firstName}]]</td>
+						<td>[[${user.lastName}]]</td>
+						<td>[[${user.roles}]]</td>
+						<td>[[${user.enabled}]]</td>
+						<td>
+							Edit &nbsp; Delete
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</div>
 		
-		<div>
-			<p> Admin Control Panel - Copyright &copy; Merchant's Guild </p>
+		<div class="text-center">
+			<p> Merchant's Guild Control Panel - Copyright &copy; Merchant's Guild </p>
 		</div>
 	</div>
 </body>
