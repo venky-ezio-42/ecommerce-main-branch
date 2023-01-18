@@ -66,6 +66,37 @@ public class UserRepositoryTests {
         assertThat(userByID).isNotNull();
     }
 
-    
+    @Test
+    public void testUpdateUserDetails() {
+
+        User userByID =  repo.findById(1).get();
+        userByID.setEnabled(true);
+
+        userByID.setEmail("kise_javaProgrammer@gmail.com");
+
+        repo.save(userByID);
+    }
+
+    @Test
+    public void testUpdateUserRoles() {
+
+        User userByID =  repo.findById(2).get();
+
+        Role roleEditor = new Role(3);
+        Role roleSalesperson = new Role(2);
+
+        userByID.getRoles().remove(roleEditor);
+        userByID.addRole((roleSalesperson));
+
+        repo.save(userByID);
+    }
+
+    @Test
+    public void testDeleteUser() {
+
+        Integer userID = 2;
+
+        repo.deleteById(userID);
+    }
 
 }
